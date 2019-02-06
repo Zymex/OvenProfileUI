@@ -1,0 +1,18 @@
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">File Name : $fileName</li>
+        <li class="list-group-item">Values in File : $valueCount</li>
+        <li class="list-group-item">Dips Analyzed : $dipCount</li>
+        <li>
+          <div style="display: block">
+            <canvas baseChart
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </li>
+      </ul>
+</div>
+
