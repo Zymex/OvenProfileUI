@@ -9,7 +9,7 @@ import { OvenactionsComponent } from 'src/ovenactions/ovenactions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
 
 @NgModule({
    declarations: [
@@ -24,7 +24,9 @@ import { ToastrModule } from 'ngx-toastr';
       ChartsModule,
       HttpClientModule,
       BrowserAnimationsModule,
-      ToastrModule.forRoot()
+      ToastrModule.forRoot(),
+      Ng2LoadingSpinnerModule.forRoot({
+      spinnerColor   : '#000'})
 
    ],
    providers: [

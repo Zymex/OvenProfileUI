@@ -8,13 +8,16 @@
             <div class="card-body">
                     <div class="input-group">
                             <div class="input-group-prepend">
-                              <button class="input-group-text btn" (click)="upload()" id="inputGroupFileAddon01">{{clickMe}}  </button>
+                              <span class="input-group-text" (click)="upload()" id="inputGroupFileAddon01">{{clickMe}}  </span>
                             </div>
                             <div class="custom-file">
                               <input type="file" accept=".xlsx" class="custom-file-input" id="inputGroupFile01" (change)="selectFile($event)" aria-describedby="inputGroupFileAddon01">
                               <label class="custom-file-label" for="inputGroupFile01">{{direction}}</label>
                             </div>
                           </div>
+                          <br>
+                          <br>
+                          <p [ng2-loading]="showSpinner"></p>
             </div>
         </div>
       </div>

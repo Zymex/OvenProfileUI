@@ -27,6 +27,7 @@ export class UploadComponent implements OnInit {
   direction: any;
   clickMe: any;
   dwellBadge: any;
+  showSpinner: Boolean = false;
   public onUploadFinished = new EventEmitter();
 
   constructor(private ovenUtilityService: OvenUtilityService) { }
@@ -40,6 +41,7 @@ export class UploadComponent implements OnInit {
     this.dwell = 'bg-light';
     this.direction = 'Please wait...';
     this.clickMe = 'Analyzing....';
+    this.showSpinner = true;
     this.upload();
   }
 
@@ -63,6 +65,7 @@ export class UploadComponent implements OnInit {
       } else { this.dwell = 'bg-danger'; this.dwellBadge = 'badge-danger'; }
       this.direction = 'Open Profile';
       this.clickMe = 'Complete';
+      this.showSpinner = false;
       }
 
     });
